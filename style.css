@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Roboto+Mono:wght@200;300;400;500&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+header {
+  max-width: 100%;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #1E22AA;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul .navlink {
+  display: inline-block;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white ;
+}
+
+.menu {
+  margin-left: 20px;
+  display: none;
+}
+
+#span-logo {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  height: 100vh;
+  background: gainsboro;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+}
+
+.title {
+  padding-bottom: 5px;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-top: 100px;
+  height: 5px;
+  width: 100px;
+  border-radius: 5px;
+  background: linear-gradient(
+    120deg,
+    #82bee6,
+    #128aec,
+    rgb(44, 44, 202),
+    rgb(21, 21, 219)
+  );
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box label.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.user-details .input-box input,
+.user-details .input-box select {
+  height: 35px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box select:focus,
+.exact-inquiry textarea:focus,
+.user-details .input-box input:valid,
+.user-details .input-box select:valid,
+.exact-inquiry textarea:valid {
+  border-color: #82bee6;
+}
+
+
+
+.exact-inquiry {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.exact-inquiry textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+.button {
+  height: 40px;
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.button input {
+  height: 100%;
+  width: 30%;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background: #6AABFF;
+}
+
+.button input:hover {
+  /* transform: scale(0.99); */
+  background: #006DE2;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+
+
+.inquiry-type  {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.inquiry-box, .category-box1, .category-box2, .category-box3 {
+  width: 100%;
+  margin-bottom: 10px;
+  
+}
+
+.category-box1, .category-box2, .category-box3 {
+  display: none;
+}
+
+.labels {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.inputDiv {
+  padding: 3px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.table-responsive {
+  margin-top: 10px;
+}
+
+/* Date Picker */
+.date-range {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.date {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.date-range label {
+  margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  nav ul {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      background: #2b30be;
+      width: 100%;
+      overflow: hidden;
+      transition: max-height 1s;
+  }
+
+  nav ul .navlink:hover {
+    background: #128aec;
+  }
+
+  nav ul .navlink {
+      display: block;
+      margin-right: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .menu {
+      display: block;
+      cursor: pointer;
+  }
+
+  span {
+    display: block;
+  }
+
+  .container {
+    max-width: 95%;
+    margin-top: 15px;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .button input {
+    width: 40%;
+  }
+
+  .inquiry-type  {
+    display: block;
+  }
+
+  .container .title {
+    position: static;
+  }
+
+  .container .title::before {
+    display: none;
+  }
+
+  
+}

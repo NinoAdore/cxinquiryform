@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Customer Inquiry Form</title>
+    <script src="index.js" defer></script>
+  </head>
+  <header>
+    <div class="navbar">
+      <a href="index.html"><div class="logo">
+          <img src="/Images/Abenson Logo.jpg" alt="Error">
+          <span id="span-logo">Inquiry Form</span>
+      </div></a>
+      <nav>
+          <ul id="MenuItems">
+              <li class="navlink"><a href="form.html">Form</a></li>
+              <li class="navlink"><a href="export.html">Export</a></li>
+              <li class="navlink"><a href="adduser.html">Add Users</a></li>
+              <li class="navlink"><a href="index.html">Logout</a></li>
+          </ul>
+      </nav>
+      <img src="/Images/menu.png" width="30px" height="30px" class="menu" 
+      onclick="menutoggle()" alt="Error">
+  </div>
+</header>
+  <body>
+      <div class="container">
+        <div class="title">Hotline Inquiry Form</div>
+        <div class="content">
+          <form action="success.html">
+            <div class="user-details">
+              <div class="input-box">
+                <label class="details" for="agent">Agent Code:</label>
+                <select name="agent" class="box" required>
+                  <option value=""></option>
+                  <option value="3250">3250</option>
+                  <option value="3251">3251</option>
+                  <option value="3252">3252</option>
+                  <option value="3253">3253</option>
+                  <option value="3254">3254</option>
+                  <option value="3255">3255</option>
+                  <option value="3256">3256</option>
+                  <option value="3257">3257</option>
+                  <option value="3258">3258</option>
+                  <option value="3259">3259</option>
+                  <option value="Outbound Call">Outbound Call</option>
+                  <option value="Inbound Call">Inbound Call</option>
+              </select>
+              </div>
+              <div class="input-box">
+                <label class="details" for="cxName">Customer Name:</label>
+                <input type="text" name="cxName" placeholder="Enter full name" required>
+              </div>
+              <div class="input-box">
+                <label class="details" for="cxNumber">Mobile Number:</label>
+                <input type="number" name="cxNumber" placeholder="Enter mobile number">
+              </div>
+              <div class="input-box">
+                <label class="details" for="cxEmail">Email Address:</label>
+                <input type="text" name="cxEmail" placeholder="Enter email" pattern="[^ @]*@[^ @]*">
+              </div>
+            </div>
+            <hr>
+            </div>
+            
+            <div class="inquiry-type">
+              <div class="inquiry-box">
+                <div class="labels"><label for="inquiry-type">Inquiry Type:</label></div>
+                <div class="inputDiv"><input id="productInquiry" class="inputs" type="radio" name="inquiry-type" required> Product Inquiry</div>
+                <div class="inputDiv"><input id="afterSales" class="inputs" type="radio" name="inquiry-type" required> After Sales</div>
+                <div class="inputDiv"><input id="paymentMethod" class="inputs" type="radio" name="inquiry-type" required> Payment Method</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="inquiry-type" required> Order Follow-up</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="inquiry-type" required> Order Cancellation</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="inquiry-type" required> Store-related</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="inquiry-type" required> Others</div>
+              </div>
+              
+              <div class="category-box1">
+                <div class="labels"><label for="category1">Product Inquiry Category:</label></div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Gadgets</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Mobile</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> TV/AV</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Aircon</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Home Appliances</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Small Appliances</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Accessories</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category1"> Furniture</div>
+              </div>
+
+              <div class="category-box2">
+                <div class="labels"><label for="category2">After Sales Category:</label></div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category2"> Home Service Request</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category2"> Installation</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category2"> Item Replacement Request</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category2"> Change Item Request</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category2"> Refund/Reversal Request</div>
+              </div>
+
+              <div class="category-box3">
+                <div class="labels"><label for="category3">Payment Method Category:</label></div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category3"> Bank Installment</div>
+                <div class="inputDiv"><input class="inputs" type="radio" name="category3"> Financing</div>
+              </div>
+            </div>
+
+            
+
+            <div class="exact-inquiry">
+              <textarea name="exact-inquiry" id="" placeholder="Enter exact inquiry here" required></textarea>
+            </div>
+
+            <div class="button">
+              <input type="Submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+  </body>
+</html>

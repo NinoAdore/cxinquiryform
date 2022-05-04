@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signIn.css" />
+    <title>Customer Inquiry Form</title>
+    <script src="signIn.js" defer></script>
+  </head>
+  <header>
+    <div class="navbar">
+      <a href="index.html"><div>
+          <img src="/Images/Abenson Logo.jpg" alt="Error">
+          <span id="span-logo">Inquiry Form</span>
+      </div></a>
+      <img src="/Images/menu.png" width="30px" height="30px" class="menu" 
+      onclick="menutoggle()" alt="Error">
+  </div>
+</header>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="form.html" class="sign-in-form">
+              <div class="logo">
+                <img src="./Images/abeLogo.png" alt="abeLogo" />
+                <h4>Hello!</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Welcome to Abenson</h2>
+                <h6>Not registred yet?</h6>
+                <a href="#" class="toggle">Message me</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Username</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    required
+                  />
+                  <label>Password</label>
+                </div>
+
+                <input type="submit" value="Sign In" class="sign-btn"/>
+
+                <p class="text">
+                  Forgotten your password or your login datails?
+                  <a href="https://msng.link/o/?09263084898=vi" target="_blank" class="toggle">Message</a> Systems Team!
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="./Images/image1.png" class="image img-1 show" alt="" />
+              <img src="./Images/image1.png" class="image img-2" alt="" />
+              <img src="./Images/image1.png" class="image img-3" alt="" />
+              <img src="./Images/image1.png" class="image img-4" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Easy ways to put here</h2>
+                  <h2>Easy ways to put here</h2>
+                  <h2>Easy ways to put here</h2>
+                  <h2>Easy ways to put here</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+                <span data-value="4"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+      <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+  </body>
+</html>
